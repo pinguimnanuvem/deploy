@@ -1,0 +1,10 @@
+// tests/app.test.js
+const request = require('supertest');
+const app = require('../app');  // Supondo que 'app' seja o servidor Express
+
+describe('GET /', () => {
+  it('should return status 200', async () => {
+    const res = await request(app).get('/');
+    expect(res.statusCode).toBe(200);
+  });
+});
